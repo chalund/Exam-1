@@ -11,13 +11,15 @@ async function getAllPosts(){
     return products;
 }
 
-
+//fetch single product
 async function getSinglePost(id){
     const response = await fetch(urlBase + blogPost + `/${id}`);
     const products = await response.json();
     return products;
 }
 
+
+//create html
 function createProductHTML(product){
     const container = document.querySelector(".container_blog-posts");
 
