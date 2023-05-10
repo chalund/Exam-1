@@ -1,9 +1,11 @@
+
+//Base url
 const urlBase = "https://wordpress-exam.charlottelund.no";
 const jsonBase = "/wp-json/wp/v2";
 const postEndpoint = "/posts";
 
+//full url
 const fullPostURL = urlBase + jsonBase + postEndpoint + "?_embed";
-
 
 
 
@@ -14,28 +16,24 @@ async function getAllPosts(){
     return products;
 }
 
-
+//fetch single post
 async function getSinglePost(id){
     const response = await fetch(fullPostURL + `/${id}`);
     const products = await response.json();
     return products;
 }
 
+
+
+//create html
 function createProductHTML(product){
     const container = document.querySelector(".container_blog-posts");
-
-
-    // const excerpt = decodeHTML(product.excerpt.rendered.replace("<p>", "").replace("</p>", ""));
-    // const exampleHTMLText = "<p>sample text</p>"
-    // const text = exampleHTMLText.replace('<p>', '').replace('</p>', '');
-
-    
-
 
     const productContainer= document.createElement("a");
     productContainer.href = `/blogPage.html?id=` + product.id;
     productContainer.classList.add("posts")
     productContainer.id = product.id
+    
 
     //temporary just to illustrate place of image
     // const id = document.createElement("h4")
@@ -46,11 +44,14 @@ function createProductHTML(product){
   
 
 
-    // const image = document.createElement("img");
-    // productContainer.classList.add("post-img");
-    // image.innerHTML = product._embedded["wp:featuredmedia"][0].source_url;
+    const image = document.createElement("img");
+  
+    image.src = product._embedded["wp:featuredmedia"][0].source_url;
+    image.alt = product._embedded["wp:featuredmedia"][0].alt_text;
 
-    // productContainer.append(image)
+    image.classList.add("post-img");
+    
+    productContainer.append(image)
 
 
     
@@ -66,7 +67,7 @@ function createProductHTML(product){
 
 
     const content = document.createElement("p");
-    content.innerText = product.excerpt.rendered;
+    content.innerText = product.excerpt.rendered.replace('<p>', '').replace('</p>', '');
     postContainer.append(content)
 
 
@@ -91,30 +92,3 @@ async function main(){
 }
 
 main()
-// function renderSInglePost(post) {
-//     const postsContainer = document.querySelector(".blog-posts");
-
-//     const wrapper = document.createElement("a");
-//     wrapper.classList.add("post");
-//     wrapper.href = "/blogPage.html?id=${id}";
-
-//     const postList = document.createElement("div");
-//     postList.classList.add("post");
-//     postList.id = post.id
-
-//     postsContainer.append(postsContainer)
-
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
