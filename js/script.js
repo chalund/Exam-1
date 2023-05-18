@@ -1,77 +1,103 @@
-
-//Base url
-const urlBase = "https://wordpress-exam.charlottelund.no";
-const jsonBase = "/wp-json/wp/v2";
-const postEndpoint = "/posts";
-
-//full url
-const fullPostURL = urlBase + jsonBase + postEndpoint + "?_embed";
+import {fullPostURL,fetchAllProducts, fetchSingleProducts, renderSingleProductHTML} from "./constants.js";
 
 
+// const productContainer = document.querySelector(".products")
+// const perPage = document.querySelector(".per-page-selection");
+const container = document.querySelector(".container_blog-posts");
 
-//fetching products
-async function getAllPosts(){
-    const response = await fetch(fullPostURL);
-    const products =  await response.json();
-    return products;
+
+// render all products/posts
+async function renderProducts() {
+    const products = await fetchAllProducts()
+
+    products.forEach(product => {
+        console.log(product)
+        // renderSingeProduct. from function renderSingleProductHTML(product)
+        const domItem = renderSingleProductHTML(product)
+        container.append(domItem)
+    });
 }
-
-//fetch single post
-async function getSinglePost(id){
-    const response = await fetch(fullPostURL + `/${id}`);
-    const products = await response.json();
-    return products;
-}
+renderProducts()
 
 
+// Load more pages/posts
+const loadMoreBtn = document.querySelector(".per_pageBtn");
+const postContainer = document.querySelector(".container_blog-posts");;
+let page = 2; // Initial page number
+const postsPerPage = 10; // Number of posts to load per page
+let totalPosts = 10; // Total number of posts fetched so far
 
-//create html
-function createProductHTML(product){
-    const container = document.querySelector(".container_blog-posts");
+loadMoreBtn.addEventListener('click', loadMorePosts);
 
-    const productContainer= document.createElement("a");
-    productContainer.href = `/blogPage.html?id=` + product.id;
-    productContainer.classList.add("posts")
-    productContainer.id = product.id
+// async function loadMorePosts() {
+//   const response = await fetch(`${fullPostURL}?page=${page}&per_page=${postsPerPage}`);
+//   const data = await response.json();
 
-    const image = document.createElement("img");
-    image.src = product._embedded["wp:featuredmedia"][0].source_url;
-    image.alt = product._embedded["wp:featuredmedia"][0].alt_text;
-    image.classList.add("post-img");
-    productContainer.append(image)
+//   // Process the fetched data
+//   data.forEach(async post => {
+//     const product = await fetchSingleProducts(post.id);
+//     const domItem = renderSingleProductHTML(product);
+//     postContainer.append(domItem);
+//     totalPosts++; // Increment the total number of posts
+//   });
 
-    const postContainer = document.createElement("div");
-    postContainer.classList.add("post-content")
-    productContainer.append(postContainer)
+//   page++; // Increment the page number for the next load
 
-
-    const title = document.createElement("h2");
-    title.innerText = product.title.rendered;
-    postContainer.append(title)
-
-    const content = document.createElement("p");
-    content.innerText = product.excerpt.rendered.replace('<p>', '').replace('</p>', '');
-    postContainer.append(content)
-
-
-    container.append(productContainer)
-
-}
-
-function createProductsHTML(products) {
-    for( let i = 0; i < products.length; i++){
-        const product = products[i];
-        createProductHTML(product)
-    }
-}
+//   // Check if the total number of posts reaches a threshold
+//   if (totalPosts >= 2) {
+//     loadMoreBtn.style.display = 'none'; // Hide the button
+//   }
+// }
 
 
 
+// //load more pages/posts
+loadMoreBtn.addEventListener('click', loadMorePosts);
 
-async function main(){
-    const products = await getAllPosts()
-    console.log(products);
-    createProductsHTML(products)
-}
+  async function loadMorePosts() {
+        const response = await fetch(`${fullPostURL}?page=${page}&per_page=${postsPerPage}`);
+        const data = await response.json();
+  
+      // Process the fetched data
+        data.forEach(post => {
+        
+        const postElement = document.createElement('a');
+        postElement.href = `blog-specific.html?id=${post.id}`;
+        postElement.classList.add("posts");
 
-main()
+        const image = document.createElement("img")
+        image.src = post.better_featured_image.source_url;
+        image.classList.add("post-img");
+        postElement.append(image);
+        
+        const detailsWrapper = document.createElement("div")
+        detailsWrapper.classList.add("post-content")
+        postElement.append(detailsWrapper)
+        
+        const heading = document.createElement("h2");
+        // <h2></H2>
+        heading.innerText = post.title.rendered;
+        heading.classList.add("post-content")
+        detailsWrapper.append(heading)
+
+        const body = document.createElement("p");
+        body.innerText = post.excerpt.rendered;
+        body.classList.add("post-content")
+        body.innerText = post.excerpt.rendered.replace('<p>', '').replace('</p>', '');
+        detailsWrapper.append(body)
+
+        postContainer.append(postElement);
+
+        totalPosts++; // Increment the total number of posts
+    });
+  
+      page++; // Increment the page number for the next load
+  
+    //   Check if the total number of posts reaches 15
+      if (totalPosts >= 2) {
+        loadMoreBtn.style.display = 'none'; // Hide the button
+      }
+  }
+
+  loadMoreBtn()
+

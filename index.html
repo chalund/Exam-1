@@ -9,8 +9,8 @@
     <link href="css/media.css" rel="stylesheet">
     <title>Life above the arctic circle | Home </title>
     <script src="https://kit.fontawesome.com/8563808f06.js" crossorigin="anonymous"></script>
-    <script src="js/menu.js" defer></script>
-    <script src="js/carousel.js" defer></script>
+    <script src="js/menu.js" defer type="module"></script>
+    <script src="js/carousel.js" defer type="module"></script>
 </head>
 <body>
     <header>
@@ -53,31 +53,11 @@
             </div>
         </section>
         <section class="carousel">
-            <h3>Latest Posts</h3>
-            <button class="carousel-button carousel-button--left">
-                <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <div class="carousel-container">
-                <ul class="carousel-track">
-                    <li class="carousel-slide">
-                        <img src="images/blaisvannet.jpg" class="carousel-image">
-                    </li>
-                    <li class="carousel-slide">
-                        <img src="images//hjertestein.jpg" class="carousel-image">
-                    </li>
-                    <li class="carousel-slide">
-                        <img src="images/lofoten.jpg" class="carousel-image">
-                    </li>
-                </ul>
-            </div>
-            <button class="carousel-button carousel-button--right">
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-            <div class="carousel-nav">
-              <button class="carousel-indicator current-slide"></button>
-              <button class="carousel-indicator"></button>
-              <button class="carousel-indicator"></button>
-            </div>
+            <h3>Latest Posts</h3> 
+                <button class="prev-button"></button>
+                <div class="carousel-container"></div>
+                <button class="next-button"></button>
+                <div class="dot-indicator"></div>
         </section>
         <section class="section_contact">
             <div class="section_contact-content">
@@ -91,7 +71,7 @@
                 </div>
             </div>
         </section>
-        <section class="most-popular">
+        <!-- <section class="most-popular">
             <div class="mp-container">
                 <h3>Most popular</h3>
                     <div class="mp-images">
@@ -101,14 +81,14 @@
                         <img src="images/blaisvannet.jpg" class="mp-image">
                     </div>
             </div>
-        </section>
+        </section> -->
         <section class="instagram">
             <div class="instagram-container">
                 <div class="instagram-images">
                     <p class="instagram-text  ">Follow me on instagram: @LifeAboveTheArcticCircle</p>
-                    <img src="images/blaisvannet.jpg" class="instagram-image">
-                    <img src="images/blaisvannet.jpg" class="instagram-image">
-                    <img src="images/blaisvannet.jpg" class="instagram-image">
+                    <img src="images/jægervatnet_midnattsol.jpg" alt="midnight sun in the mountains" class="instagram-image">
+                    <img src="images/lofoten.jpg" alt="girl looking down from mountains" class="instagram-image">
+                    <img src="images/winterSortland.jpg" alt="beautiful lights in the mountain at wintertime" class="instagram-image">
                 </div>
             </div>
         </section>

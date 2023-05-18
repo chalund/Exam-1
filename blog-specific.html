@@ -7,9 +7,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
     <title>Life above the arctic circle | Blog Page </title>
-    <script src="js/menu.js" defer></script>
     <script src="https://kit.fontawesome.com/8563808f06.js" crossorigin="anonymous"></script> <meta name="description" content="Blog page, Life above the arctic circle">
-    <script src="js/blogPage.js" defer></script> 
+     <script src="js/menu.js" defer></script>
+    <script src="/js/blogSpecific.js" defer type="module"></script> 
 </head>
 <body>
     <header>
@@ -37,8 +37,16 @@
         </nav>
     </header>
     <main>
-        <div class="blog-page">
+        <div class="specific">
             <!-- <div class="loader"></div> -->
+        </div>
+
+         <!-- Modal -->
+         <div id="modal">
+            <div id="modalContent">
+                <span id="closeModal">&times;</span>
+                <img id="modalImage" src="" alt="Modal Image">
+            </div>
         </div>
     </main>
   
