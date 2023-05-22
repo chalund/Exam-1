@@ -1,4 +1,4 @@
-import { fetchSingleProducts} from "./constants.js";
+import { fetchSingleProducts } from "./constants.js";
 
 const pageWrapper = document.querySelector(".blog-page")
 const queryString = window.location.search;
@@ -6,8 +6,10 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const blogPage = document.querySelector(".specific");
 
+
 //create html on blog specific page
 async function renderPost() {
+   
     const post = await fetchSingleProducts(id);
     console.log(post)
 

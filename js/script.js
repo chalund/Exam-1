@@ -1,9 +1,10 @@
-import {fullPostURL,fetchAllProducts, fetchSingleProducts, renderSingleProductHTML} from "./constants.js";
+import {fullPostURL,fetchAllProducts, renderSingleProductHTML} from "./constants.js";
 
 
 // const productContainer = document.querySelector(".products")
 // const perPage = document.querySelector(".per-page-selection");
 const container = document.querySelector(".container_blog-posts");
+
 
 
 // render all products/posts
@@ -75,7 +76,6 @@ loadMoreBtn.addEventListener('click', loadMorePosts);
         postElement.append(detailsWrapper)
         
         const heading = document.createElement("h2");
-        // <h2></H2>
         heading.innerText = post.title.rendered;
         heading.classList.add("post-content")
         detailsWrapper.append(heading)
@@ -99,5 +99,5 @@ loadMoreBtn.addEventListener('click', loadMorePosts);
       }
   }
 
-  loadMoreBtn()
+
 

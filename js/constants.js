@@ -1,11 +1,10 @@
-//Base url
+//base url
 const urlBase = "https://wordpress-exam.charlottelund.no";
 const jsonBase = "/wp-json/wp/v2";
 const postEndpoint = "/posts";
 
 //full url
 const fullPostURL = urlBase + jsonBase + postEndpoint;
-
 
 //fetch api
 async function fetchAllProducts() {
@@ -53,9 +52,10 @@ function renderSingleProductHTML(product) {
 
 
 
+
 export {
     fullPostURL,
     fetchAllProducts,
     fetchSingleProducts,
-    renderSingleProductHTML
+    renderSingleProductHTML,
 }
