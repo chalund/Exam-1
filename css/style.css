@@ -100,7 +100,7 @@ footer {
    position: absolute;
    right: 2rem;
    height: 0;
-   top: 60px;
+   top: 40px;
    width: 300px;
    background: rgba(222, 225, 225, 0.1);
    backdrop-filter: blur(15px);
@@ -116,7 +116,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    margin: 2px;
 }
 
 .dropdown_menu li :hover {
