@@ -20,6 +20,13 @@ async function fetchSingleProducts(id) {
     return result
 }
 
+function formatDate(apiData) {
+    const date = new Date(apiData);
+    const formattedDate = date.toLocaleDateString();
+    return formattedDate;
+  }
+
+
 //create html
 function renderSingleProductHTML(product) {
 
@@ -45,6 +52,14 @@ function renderSingleProductHTML(product) {
     body.classList.add("post-content")
     body.innerText = product.excerpt.rendered.replace('<p>', '').replace('</p>', '');
     detailsWrapper.append(body)
+
+    const date = document.createElement("p");
+    date.innerText = formatDate(product.date);
+    detailsWrapper.append(date)
+    // const btn = document.createElement("p")
+    // btn.innerText = "Read more..."
+    // btn.classList.add("readMore-btn");
+    // detailsWrapper.append(btn)
  
     wrapper.append(image ,detailsWrapper)
     return wrapper;
@@ -58,4 +73,5 @@ export {
     fetchAllProducts,
     fetchSingleProducts,
     renderSingleProductHTML,
+    formatDate
 }
