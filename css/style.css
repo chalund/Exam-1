@@ -35,8 +35,8 @@ a {
     padding: 8px;
 }
 
-.cta-center{
-    text-align: center;
+.cta-center {
+    margin: 40px auto 10px;
 }
 
 .header {
@@ -158,7 +158,17 @@ footer {
 
 .home_section1 {
     background-color: #DFE3E3;
-    padding: 10px;
+    padding: 20px;
+}
+
+.home_section1 h2 {
+    text-align: center;
+}
+
+.cta-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home_section1-content  {
@@ -166,6 +176,8 @@ footer {
     flex-direction: column;
     gap: 30px;
     padding: 10px;
+    margin: 0 auto;
+    max-width: 500px;
 }
 
 .home_section1 img, 
@@ -189,6 +201,7 @@ footer {
     overflow: hidden;
     margin: 0 auto;
     padding: 30px;
+    max-height: 200px;
 }
 
 .carousel-container a {
@@ -206,6 +219,7 @@ footer {
     height: 100%;
     object-fit: cover;
     box-shadow: 0 0 10px rgb(0, 0, 0);
+    
 }
 
 .carousel-container img:hover {
@@ -222,7 +236,7 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     z-index: 1;
     box-shadow: 1px 5px 11px 1px rgba(0,0,0,0.5); 
@@ -467,40 +481,34 @@ footer {
 
 /* blog specific page*/
 .blog-specific {
-    max-width: 800px;
-    margin: 50px auto;
-
+    margin: 20px;
 }
 
 .blog-specific-image {
-    width: 100%;
-    max-width: 800px;
-    max-height: 300px;
-    display: flex;
-   justify-content: center;
-   align-items: center;
+    display: block;
+    margin: 0 auto;
 }
+
+.blog-specific img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 300px;
+} 
 
 .blog-specific h1,
 .date {
     text-align: center;
-    padding-bottom: 30px;
 }
 
 .specific-section{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-
-     
-    }
-
-.section-two-image{
-    width: 80%;
-    height: 200px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-
+.section-two-image{
+    width: 50%;
+    height: 200px;
+}
 
 /* modal*/
 #modal {
