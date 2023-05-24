@@ -48,7 +48,7 @@ a {
     justify-content: center;
 }
 
-nav {
+nav li {
     display: none;
 }
 
@@ -65,8 +65,12 @@ nav {
     margin: 10px;
 }
 
-nav {
-    display: none;
+
+nav ul {
+    background-color: #E9E9E9;
+    margin: 20px;
+    list-style: none;
+    text-align: center;
 }
 
 footer {
