@@ -33,7 +33,6 @@ function fetchImagesFromContent(imageContent) {
 async function renderPost() {
    
     const post = await fetchSingleProducts(id);
-    console.log(post)
 
     const wrapper = document.createElement("div");
     wrapper.classList.add("blog-specific")
