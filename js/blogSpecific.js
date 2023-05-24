@@ -31,7 +31,9 @@ function fetchImagesFromContent(imageContent) {
 
 //create html on blog specific page
 async function renderPost() {
-   
+    const loader = document.querySelector(".loader");
+    loader.style.display = "block";
+
     const post = await fetchSingleProducts(id);
 
     const wrapper = document.createElement("div");
@@ -93,6 +95,7 @@ async function renderPost() {
       }
       
     blogPage.append(wrapper)
+    loader.style.display = "none";
     return blogPage;
 }
 renderPost()
