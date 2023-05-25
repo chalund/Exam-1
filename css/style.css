@@ -80,7 +80,7 @@ a {
     -webkit-text-fill-color: white; 
 }
 
-nav li {
+nav ul {
     display: none;
 }
 
@@ -99,12 +99,12 @@ nav li {
 }
 
 
-nav ul {
+/* nav ul {
     background-color: #E9E9E9;
     margin: 20px;
     list-style: none;
     text-align: center;
-}
+} */
 
 footer {
     background-color:#21282D;
