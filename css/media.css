@@ -15,6 +15,7 @@
     margin: 20px 0px;
 }
 
+
 }
 
 @media(min-width:480px){
@@ -24,6 +25,10 @@
 
 .container_blog-posts {
     padding: 0px 50px;
+}
+
+.carousel-container img {
+    height: 100%;
 }
 
 .post-content {
@@ -187,6 +192,10 @@ body{
     text-align: left;
     margin: 30px  auto;
     padding: 10px 30px;
+}
+
+.backTo{
+    text-align: center;
 }
 
 .posts {

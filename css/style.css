@@ -12,16 +12,21 @@ a {
 }
 
 .cta{
-    background-color: #FFF;
+    background-color: #004C66;
     width: 140px;
     padding: 10px;
     text-align: center;
     text-transform: uppercase;
     color: #000;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #979797;
     cursor: pointer;
-    box-shadow: 1px 5px 11px 1px rgba(0,0,0,0.5);
+    /* box-shadow: 1px 5px 11px 1px rgba(0,0,0,0.5); */
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)  
+}
+
+.cta a{
+    color: #FFF;
 }
 
 .cta:hover {
@@ -30,14 +35,7 @@ a {
 }
 
 .cta-gray {
-    background-color: #E9E9E9;
     margin: 40px auto 10px;
-    padding: 8px;
-}
-
-.cta-center {
-    margin: 40px auto 10px;
-    background-color: #004C66;
 }
 
 #per_pageBtn {
@@ -50,22 +48,23 @@ a {
 }
 
 .backTo a {
-    display: flex;
+    /* display: flex;
+    justify-content: center; */
     align-items: center;
-    margin: 40px 0px 10px;
+    margin: 0px auto;
     cursor: pointer;
+    color: #21282D;;
 }
 
 .backTo a:hover {
-    font-size: larger;
     color: #004C66;
+    
 }
 
 
 .backTo i {
     font-size: 36px;
-    margin: 10px;
-    color: #004C66;
+    margin-top: 10px;
 }
 
 .header {
@@ -106,7 +105,7 @@ nav li {
 
 nav ul {
     background-color: #E9E9E9;
-    margin: 15px;
+    margin: 8px;
     list-style: none;
     text-align: center;
 }
@@ -283,7 +282,8 @@ footer {
   
 .carousel-container img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: 200px;
     object-fit: cover;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     
@@ -321,6 +321,7 @@ footer {
 .prev-button:hover ,
 .next-button:hover{
     box-shadow: 0 0 10px rgb(0, 0, 0);
+    color: #004C66;
 }
 
 .button-disabled {
@@ -498,15 +499,11 @@ footer {
 }
 
 .form-button {
-    background-color: #004C66;
-    color: #FFF;
     margin-left: 24%;
     margin-top: 25px;
-    padding: 10px 20px;
     width: 150px;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)   
+    color: #FFF;
+    font-size: 16px;
 }
 
 .form-error {
@@ -559,11 +556,15 @@ footer {
     margin-top: 5px;
 }
 
-.per_page{
+.backTo{
+    
+}
+
+/* .per_page{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 /* .per_pageBtn{
     max-width: 800px;
     margin: 30px auto;
@@ -595,7 +596,6 @@ footer {
 .specific-section img{
     width: 100%;
     height: 100%;
-    max-height: 200px;
 }
 
 /* modal*/
@@ -627,7 +627,7 @@ footer {
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 24px;
+    font-size: 36px;
     color: #fff;
     cursor: pointer;
 }
