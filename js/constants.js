@@ -44,12 +44,12 @@ function renderSingleProductHTML(product) {
 
     const heading = document.createElement("h2");
     heading.innerText = product.title.rendered;
-    heading.classList.add("post-content")
+    // heading.classList.add("post-content")
     detailsWrapper.append(heading)
 
     const body = document.createElement("p");
     body.innerText = product.excerpt.rendered;
-    body.classList.add("post-content")
+    // body.classList.add("post-content")
     body.innerText = product.excerpt.rendered.replace('<p>', '').replace('</p>', '');
     detailsWrapper.append(body)
 

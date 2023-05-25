@@ -18,7 +18,7 @@ async function renderCarousel() {
       const index = i % images.length;
       const image = document.createElement('img');
       const link = document.createElement("a");
-      link.href = `blogPosts.html?id=${images[index].id}`;
+      link.href = `blog-specific.html?id=${images[index].id}`;
       image.src = images[index].better_featured_image.source_url;
       image.alt = images[index].better_featured_image.altText;
       image.classList.add('carousel-image');
@@ -28,10 +28,10 @@ async function renderCarousel() {
   }
 
   function createDot(index) {
-    const dot = document.createElement('span');
+  const dot = document.createElement('span');
     dot.classList.add('dot');
     dot.addEventListener('click', function () {
-      currentIndex = index;
+    currentIndex = index;
       showImages(images, currentIndex * getImagesPerSlide());
       updateActiveDot();
     });
@@ -48,6 +48,18 @@ async function renderCarousel() {
   function updateButtonState() {
     prevButton.disabled = currentIndex === 0;
     nextButton.disabled = currentIndex >= Math.floor(images.length / getImagesPerSlide()) - 1;
+
+    if (prevButton.disabled) {
+      prevButton.classList.add('button-disabled');
+    } else {
+      prevButton.classList.remove('button-disabled');
+    }
+  
+    if (nextButton.disabled) {
+      nextButton.classList.add('button-disabled');
+    } else {
+      nextButton.classList.remove('button-disabled');
+    }
   }
 
   function getImagesPerSlide() {
@@ -70,6 +82,7 @@ async function renderCarousel() {
   showImages(images, currentIndex * getImagesPerSlide());
   updateActiveDot();
   updateButtonState();
+
 
   prevButton.addEventListener('click', function () {
     if (prevButton.disabled) return;

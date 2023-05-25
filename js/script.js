@@ -17,18 +17,21 @@ renderProducts()
 
 
 // Load more pages/posts
-const loadMoreBtn = document.querySelector(".per_pageBtn");
+const loadMoreBtn = document.querySelector("#per_pageBtn");
 const postContainer = document.querySelector(".container_blog-posts");;
 let page = 2; // Initial page number
 const postsPerPage = 10; // Number of posts to load per page
 let totalPosts = 10; // Total number of posts fetched so far
+
+// Hide the loader initially
+const loader = document.querySelector(".loader");
+loader.style.display = "none";
 
 //load more pages/posts
 loadMoreBtn.addEventListener('click', loadMorePosts);
 
 
 async function loadMorePosts() {
-    const loader = document.querySelector(".loader");
     loader.style.display = "block";
 
     const response = await fetch(`${fullPostURL}?page=${page}&per_page=${postsPerPage}`);
@@ -63,20 +66,20 @@ async function loadMorePosts() {
 
     postContainer.append(postElement);
        
-
+    
     totalPosts++; // Increment the total number of posts
     });
   
     page++; // Increment the page number for the next load
-  
+    
     //Check if the total number of posts reaches 15
     if (totalPosts >= 2) {
         loadMoreBtn.style.display = 'none'; // Hide the button
     }
-
     loader.style.display = "none";
+
 }
-loadMorePosts()
+
 
 
 

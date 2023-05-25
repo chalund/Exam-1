@@ -101,6 +101,10 @@ async function renderPost() {
 renderPost()
 
 
+
+
+
+
 //create modal for image
 const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modalContent");
@@ -127,4 +131,17 @@ function showModal(imageUrl) {
       hideModal();
     }
   });
+
+
+const backToTopButton = document.getElementById('backToTopButton');
+
+backToTopButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}); 
+
+
 

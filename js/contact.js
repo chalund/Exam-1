@@ -15,21 +15,21 @@ function validateForm (event) {
 
     let hasErrors = false;
 
-    if(checkLength(fullName.value, 4) === true) {
+    if(checkLength(fullName.value, 2) === true) {
         nameError.style.display = "none";
     } else {
         nameError.style.display = "block";
         hasErrors = true;
     }
 
-    if(checkLength(subject.value, 14) === true) {
+    if(checkLength(subject.value, 9) === true) {
         subjectError.style.display = "none";
     } else {
         subjectError.style.display = "block";
         hasErrors = true;
     }
 
-    if(checkLength(message.value, 25) === true) {
+    if(checkLength(message.value, 9) === true) {
         messageError.style.display = "none";
     } else {
         messageError.style.display = "block";
@@ -68,3 +68,9 @@ function validateEmail(email) {
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
+
+
+function clearFields() {
+    form.reset();
+}
+form.addEventListener("submit", clearFields);

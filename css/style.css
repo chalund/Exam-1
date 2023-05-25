@@ -19,7 +19,7 @@ a {
     text-transform: uppercase;
     color: #000;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid #979797;
     cursor: pointer;
     box-shadow: 1px 5px 11px 1px rgba(0,0,0,0.5);
 }
@@ -40,9 +40,34 @@ a {
     background-color: #004C66;
 }
 
+#per_pageBtn {
+    background-color: #004C66;
+    color: #fff;
+}
+
 .cta-center a{
     color: #F5F5F5;
 }
+
+.backTo a {
+    display: flex;
+    align-items: center;
+    margin: 40px 0px 10px;
+    cursor: pointer;
+}
+
+.backTo a:hover {
+    font-size: larger;
+    color: #004C66;
+}
+
+
+.backTo i {
+    font-size: 36px;
+    margin: 10px;
+    color: #004C66;
+}
+
 
 .header {
     background-color: #004C66;
@@ -281,6 +306,10 @@ footer {
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
+.button-disabled {
+    opacity: 0.5;
+}
+
 .carousel-nav {
     display: flex;
     justify-content: center;
@@ -406,6 +435,7 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     background-color: #E9E9E9;
     box-shadow: 0 0 10px rgb(0, 0, 0);
+    max-width: 500px;
 }
 
 .contact_form-content h3 {
@@ -442,8 +472,9 @@ footer {
 }
 
 .form-button {
-    background-color: #fff;
-    margin-left: 26%;
+    background-color: #004C66;
+    color: #FFF;
+    margin-left: 24%;
     margin-top: 25px;
     padding: 10px 20px;
     width: 150px;
@@ -471,7 +502,6 @@ footer {
 /* blogPosts*/
 .blog-post {
     text-align: center;
-    padding: 10px 30px;
 }
 
 .posts {
@@ -492,28 +522,42 @@ footer {
 .post-content {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    padding: 10px 20px;
 }
 
 .post-content h2{
     text-decoration: underline #004C66;
-  
 }
 
-.per_pageBtn{
+.post-content p{
+    margin-top: 5px;
+}
+
+.per_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .per_pageBtn{
     max-width: 800px;
     margin: 30px auto;
-}
+} */
 
 
 /* blog specific page*/
 .blog-specific {
     margin: 20px;
+    max-width: 600px;
+}
+
+.blog-specific > * {
+    padding: 5px 10px;
 }
 
 .blog-specific-image {
     display: block;
     margin: 0 auto;
+    padding: 0;
 }
 
 .blog-specific img {

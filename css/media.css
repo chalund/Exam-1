@@ -16,51 +16,36 @@
 .home_section1-content {
     padding: 30px 50px;
 }
+
+.container_blog-posts {
+    padding: 0px 50px;
+}
+
+.post-content {
+    padding: 0px;
+}
+
+.post-img {
+    max-width: 500px;
+}
+
+.contact_form {
+    background-color: #fff;
+    padding: 0px 50px 50px;
+}
+
+.contact-form {
+    margin: -20px auto;
+    font-size: 16px;
+}
+
+form {
+    text-align: left;
+    padding: 40px;
+}
 }
 
 @media(min-width:580px){
-/* .header {
-    font-size: 16px;
-    padding: 20px;
-    text-align: center;
-    line-height: 0px;
-    display: block;
-} */
-
-/* nav {
-    display: inline;
-}
-
-nav ul {
-    margin: 0;
-}
-    
-nav li {
-    display: inline-block;
-}
-    
-nav a {
-    color: #000;
-    text-decoration: none;
-    width: 100px;
-    display: block;
-    padding: 10px 20px;
-    text-align: center;
-}
-    
-nav li:hover {
-    text-decoration: underline;
-}
-
-.toggle_btn {
-    display: none;
-}
-
-.dropdown_menu.open {
-    display: none;
-} */
-
-
 
 .section_contact {
     padding: 50px;
@@ -125,6 +110,12 @@ nav li:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+
+
+
+
+
+
 }
 
 @media(min-width:620px){
@@ -168,6 +159,10 @@ nav li:hover {
 .dropdown_menu.open {
     display: none;
 }
+
+.logo {
+    font-size: 36px;
+}
 }
 
 
@@ -176,16 +171,21 @@ body{
     font-size: 18px;
 }
 
+.container_blog-posts {
+  padding: 0px;
+}
+
 .blog-post {
     max-width: 800px;
     text-align: left;
     margin: 30px  auto;
+    padding: 10px 30px;
 }
 
 .posts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 65px;   
+    grid-gap: 55px;   
     margin: 80px 0px; 
     max-height: 300px;
 }
@@ -201,6 +201,12 @@ body{
 .post-img:hover{
     box-shadow: none;
 }
+
+.post-content p{
+    margin-top: 10px;
+}
+
+
 
 .instagram-container {
     width: 80%;
@@ -276,10 +282,9 @@ body{
     margin: 40px;
 }
 
-.section-contact ,
 .contact_form {
-    background-color: #fff;
-    padding: 50px;
+    margin: 30px;
+    padding: 25px;
 }
 
 .contact_form img {
