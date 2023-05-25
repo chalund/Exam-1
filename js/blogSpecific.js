@@ -11,8 +11,9 @@ const blogPage = document.querySelector(".specific");
 function cleanedString(htmlString) {
     return htmlString
       .replace(/<\/?p>/g, "")
-      .replace(/<br>/g, "\n")
-      .replace(/<.*?>/g, "");
+      .replace(/<.*?>/g, "")
+      .replace(/<\/p>\s*<p>/g, "");
+
   }
 
 //fetch images from content
@@ -35,6 +36,7 @@ async function renderPost() {
     loader.style.display = "block";
 
     const post = await fetchSingleProducts(id);
+    console.log(post)
 
     const wrapper = document.createElement("div");
     wrapper.classList.add("blog-specific")
