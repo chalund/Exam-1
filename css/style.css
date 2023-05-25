@@ -84,7 +84,7 @@ nav li {
 }
 
 .logo {
-    color: #f5f5f5;
+    /* color: #f5f5f5; */
     font-size: 30px;
     padding: 10px;
     margin-right: 10px;
@@ -93,6 +93,7 @@ nav li {
 .logo-a a{
     display: inline-flex;
     align-items: center;
+    color: #f5f5f5;
 }
 
 .toggle_btn {
