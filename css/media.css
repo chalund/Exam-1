@@ -24,8 +24,6 @@
 }
 
 
-
-
 @media(min-width:480px){
 .home_section1-content {
     padding: 30px 50px 50px;
@@ -81,12 +79,12 @@ form {
     margin: 20px 0px;
 }
 
-
 .about_text,
 .about_section2-facts {
     padding: 0px 80px;
 }
 }
+
 
 @media(min-width:580px){
 .section_contact {
@@ -123,15 +121,10 @@ form {
     object-fit: cover;
 }
 
-
 .background_contact {
     padding-top: 180px;
     background-position-y: 64% ;
 }
-
-/* .about_section1-content {
-    margin: 30px 100px;
-} */
 
 .about_welcome ,
 .contact_welcome {
@@ -142,8 +135,6 @@ form {
     border: 1px solid gray;
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
-
-
 }
 
 @media(min-width:620px){
@@ -277,10 +268,6 @@ body{
     max-height: 400px;
 }
 
-/* .cta-center {
-    margin: 0px
-} */
-
 .section_contact-content {
     width: 100%;
     grid-gap: 50px 0px;
@@ -302,11 +289,6 @@ body{
     margin-bottom: 30px;
 }
 
-/* .about_section1 img{
-    margin-top: 53px;
-} */
-
-
 .about_text, 
 .about_section2-facts {
     font-size: 16px;
@@ -324,10 +306,6 @@ body{
     margin: 0 auto;
 }
 
-/* .about_section2 img {
-    height: 300px;
-} */
-
 .about_section1-img, 
 .about_section2-img {
     max-width: 100%;
@@ -336,14 +314,8 @@ body{
 .about_section2-facts {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 60px;
-    /* padding: 30px 0px; */
     max-width: 1000px;
 }
-
-/* .about_section1{
-    padding: 10px;
-    margin: 40px;
-} */
 
 .about_section2 {
     padding: 20px 0px;
@@ -353,12 +325,6 @@ body{
 .about_section2-facts {
     font-size: 16px;
 }
-
-
-
-
-
-
 
 .contact_form {
     margin: 30px;
@@ -427,17 +393,7 @@ form {
 
 .about_text, .about_section2-facts {
     padding: 0px;
-
-
-
-
-
-
-/* .about_section1{
-    padding: 10px;
-    margin: 40px;
-} */
-
+}
 
 .cta-center {
     margin-top: 50px;
