@@ -22,7 +22,7 @@ function validateForm (event) {
         hasErrors = true;
     }
 
-    if(checkLength(subject.value, 9) === true) {
+    if(checkLength(subject.value, 4) === true) {
         subjectError.style.display = "none";
     } else {
         subjectError.style.display = "block";
@@ -43,10 +43,12 @@ function validateForm (event) {
         hasErrors = true;
     }
 
-    if (!hasErrors === true) {
-         alert ("Your message is sent!");
+    if (!hasErrors) {
+        form.reset();
+        alert("Your message is sent!");
+        clearFields();
     } else {
-        successMessage.style.display = "block";
+        successMessage.style.display = "none";
     }
 }
 
@@ -71,6 +73,8 @@ function validateEmail(email) {
 
 
 function clearFields() {
-    form.reset();
-}
-form.addEventListener("submit", clearFields);
+    fullName.value = "";
+    email.value = "";
+    subject.value = "";
+    message.value = "";
+    }
