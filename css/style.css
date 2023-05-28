@@ -478,6 +478,10 @@ footer {
     margin: 1rem auto;
 }
 
+.instagram_contactPage {
+    background-color: #FFF;
+}
+
 /* blogPosts*/
 .blog-post {
     text-align: center;
