@@ -13,8 +13,7 @@ function cleanedString(htmlString) {
       .replace(/<\/?p>/g, "")
       .replace(/<.*?>/g, "")
       .replace(/<\/p>\s*<p>/g, "");
-
-  }
+}
 
 //fetch images from content
 function fetchImagesFromContent(imageContent) {
@@ -29,7 +28,7 @@ function fetchImagesFromContent(imageContent) {
   
     return images;
   }
-  
+
 
 //create html on blog specific page
 async function renderPost() {

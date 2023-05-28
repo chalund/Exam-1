@@ -64,17 +64,15 @@ function checkLength(value, length) {
     }
 }
 
-
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
 
-
 function clearFields() {
     fullName.value = "";
     email.value = "";
     subject.value = "";
     message.value = "";
-    }
+}
