@@ -65,11 +65,11 @@ async function renderCarousel() {
   function getImagesPerSlide() {
     // Adjust the number of images per slide based on the screen size
     if (window.innerWidth < 768) {
-      return 1; // Show 1 image per slide for screens smaller than 600px
+      return 1;
     } else if (window.innerWidth < 1000) {
-      return 2; // Show 2 images per slide for screens between 600px and 900px
+      return 2;
     } else {
-      return 3; // Show 3 images per slide for screens larger than 900px
+      return 3;
     }
   }
 
@@ -100,11 +100,10 @@ async function renderCarousel() {
     updateButtonState();
   });
 
-  // Add event listener for window resize to handle responsiveness
+// Add event listener for window resize to handle responsiveness
   window.addEventListener('resize', function () {
     showImages(images, currentIndex * getImagesPerSlide());
     updateButtonState();
   });
 }
-
 renderCarousel();

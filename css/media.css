@@ -1,6 +1,6 @@
 @media(min-width:410px){
 .dropdown_menu {
-        top: 56px;
+    top: 56px;
 }
 
 .dropdown_menu.open {
@@ -17,7 +17,6 @@
 
 .about_section1 img,
 .about_section2 img {
-    /* padding: 10px; */
     margin: 20px auto 20px;
     max-width: 350px;
 }
@@ -43,21 +42,6 @@
 
 .post-img {
     max-width: 500px;
-}
-
-.contact_form {
-    background-color: #fff;
-    padding: 0px 50px 50px;
-}
-
-.contact-form {
-    margin: -20px auto;
-    font-size: 16px;
-}
-
-form {
-    text-align: left;
-    padding: 40px;
 }
 
 .specific-section img{
@@ -136,6 +120,7 @@ form {
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 }
+
 
 @media(min-width:620px){
 .header {
@@ -253,7 +238,7 @@ body{
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px 30px;
+    grid-gap: 50px 80px;
 }
 
 .home_section1-content, 
@@ -275,12 +260,6 @@ body{
 
 .section_contact-text {
     padding: 40px 10px;
-}
-
-.about_section1 img,
-.about_section2 img {
-
-    max-width: 100%;
 }
 
 .about_section1-content {
@@ -306,6 +285,11 @@ body{
     margin: 0 auto;
 }
 
+.about_section1 img,
+.about_section2 img {
+    max-width: 100%;
+}
+
 .about_section1-img, 
 .about_section2-img {
     max-width: 100%;
@@ -321,33 +305,20 @@ body{
     padding: 20px 0px;
 }
 
-.about_text, 
-.about_section2-facts {
-    font-size: 16px;
-}
-
 .contact_form {
     margin: 30px;
     padding: 25px;
 }
 
 .contact_form img {
-    height: 100%;
-}
-
-.contact-form {
-    margin: -20px auto;
-    font-size: 16px;
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
 .contact_form-content h3 {
-    font-size: 20px;
     margin-top: 60px;
-}
-
-form {
-    text-align: left;
-    padding: 40px;
 }
 
 .contact_form-content {
@@ -362,7 +333,7 @@ form {
     margin: 0 10px;
 }
 
-.carousel-container {
+.carousel-container { 
     max-width: 650px;
     max-height: 450px;
 }
@@ -411,7 +382,6 @@ form {
     width: calc(100% / 3 - 20px);
 }
 }
-
 
 @media(min-width:1024px){
 .prev-button {

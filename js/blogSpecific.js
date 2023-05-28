@@ -29,6 +29,7 @@ function fetchImagesFromContent(imageContent) {
   
     return images;
   }
+  
 
 //create html on blog specific page
 async function renderPost() {
@@ -36,8 +37,7 @@ async function renderPost() {
     loader.style.display = "block";
 
     const post = await fetchSingleProducts(id);
-    console.log(post)
-
+ 
     const wrapper = document.createElement("div");
     wrapper.classList.add("blog-specific")
     blogPage.append(wrapper)
@@ -103,10 +103,6 @@ async function renderPost() {
 renderPost()
 
 
-
-
-
-
 //create modal for image
 const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modalContent");
@@ -132,18 +128,4 @@ function showModal(imageUrl) {
     if (event.target === modalContent) {
       hideModal();
     }
-  });
-
-
-const backToTopButton = document.getElementById('backToTopButton');
-
-backToTopButton.addEventListener('click', function (event) {
-  event.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}); 
-
-
-
+});

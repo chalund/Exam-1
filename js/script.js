@@ -7,8 +7,7 @@ async function renderProducts() {
     const products = await fetchAllProducts()
 
     products.forEach(product => {
-        console.log(product)
-        // renderSingeProduct. from function renderSingleProductHTML(product)
+     // renderSingeProduct. from function renderSingleProductHTML(product)
         const domItem = renderSingleProductHTML(product)
         container.append(domItem)
     });
@@ -74,12 +73,18 @@ async function loadMorePosts() {
     
     //Check if the total number of posts reaches 15
     if (totalPosts >= 2) {
-        loadMoreBtn.style.display = 'none'; // Hide the button
+        loadMoreBtn.style.display = 'none';
     }
     loader.style.display = "none";
-
 }
 
 
+const backToTopButton = document.querySelector('#backToTopButton');
 
-
+backToTopButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}); 

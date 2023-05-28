@@ -65,9 +65,6 @@ function renderSingleProductHTML(product) {
     return wrapper;
 }
 
-
-
-
 export {
     fullPostURL,
     fetchAllProducts,

@@ -10,5 +10,3 @@ toggleBtn.onclick = function () {
         ? `fa-solid fa-xmark`
         : `fa-solid fa-bars`;
 };
-
-
