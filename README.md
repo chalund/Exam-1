@@ -1,6 +1,4 @@
 # Project Exam 1
-
-# Semester Project
 ![Screenshot](./images/exam.png)
 
 ## Table of Contents
