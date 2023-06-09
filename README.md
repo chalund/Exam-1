@@ -10,7 +10,9 @@
 * [Contact](#contact)
 
 ## General info
+Life above the arctic circle is a blog using WordPress as CMS and fetching the content from the WordPress API.
 
+This exam project contains everything we have learned this school year. From planning a task, creating a prototype, writing code using html and css as well as creating functions with javascript and create API using Wordpress.
 
 ## Built with
 This project is built using:
